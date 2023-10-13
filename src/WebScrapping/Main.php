@@ -70,6 +70,8 @@ class Main
                 Paper::$largestAuthorsQuantity = max($largestAuthorsQuantity);
             }
 
+            SpoutLibrary::createSpeadSheet($data); 
+
         } catch (Throwable $th) {
             throw new Exception("{$th->getMessage()} in line: {$th->getLine()}", 1);
         }
